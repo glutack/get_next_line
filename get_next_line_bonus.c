@@ -16,9 +16,7 @@ char	*get_next_line(int fd)
 {
 	static char		*save[4096];
 	char			*line;
-	unsigned int	i;
 
-	i = 0;
 	if (fd < 0 || fd > 4095 || BUFFER_SIZE <= 0 || read(fd, 0, 0) < 0)
 	{
 		free(save[fd]);
